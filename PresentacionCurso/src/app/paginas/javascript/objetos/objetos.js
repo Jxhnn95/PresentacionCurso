@@ -75,7 +75,7 @@ console.log({ manzana }, { cantidadManzanas }, { mismaCantidadManzanas });
 console.log(`${frutas["platano"].nombre}: ${frutas["platano"].precio} €`);
 console.log(frutas["platano"].nombre + ": " + frutas["platano"].precio + " €"); // lo mismo
 console.log(`${frutas["manzana"].nombre}: ${frutas["manzana"].precio} €`);
-
+console.log(frutas ["manzana"].nombre + ":" + frutas["manzana"].precio + " €");
 // implementar función para mostrar el precio de la fruta
 // Ejemplo de llamada a la función para ver el de la Manzana
 verPrecio("manzana"); // Manzana Roja: 0.5 €

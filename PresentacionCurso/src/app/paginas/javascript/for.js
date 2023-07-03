@@ -1,8 +1,8 @@
 
-while (indice <= 10) {
+/*while (indice <= 10) {
   console.log({ indice });
   indice++;
-}
+} */
 
 // equivalente al código de arriba
 // más adecuado y legible para recorrer listas

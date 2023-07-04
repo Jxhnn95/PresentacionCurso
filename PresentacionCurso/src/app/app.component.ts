@@ -39,3 +39,16 @@ export class HtmlComponent implements OnInit{
 
   title= 'HtmlCss'
 }
+
+export class JavaComponent implements OnInit{
+
+  title= 'Java'
+}
+
+export class JavascriptComponent implements OnInit{
+
+  title= 'Js'
+}
+export class Nodecomponent implements OnInit{
+  title= "node"
+}

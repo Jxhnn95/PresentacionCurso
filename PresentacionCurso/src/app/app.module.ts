@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { PaginasComponent } from './paginas/paginas.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { HtmlComponent } from './paginas/html/html.component';
-import { CssComponent } from './paginas/css/css.component';
 import { JavascriptComponent } from './paginas/javascript/javascript.component';
 import { NodeComponent } from './paginas/node/node.component';
 import { AngularComponent } from './paginas/angular/angular.component';
@@ -23,9 +22,7 @@ import { ProblemasComponent } from './paginas/javascript/problemas/problemas.com
     AppComponent,
     PaginasComponent,
     InicioComponent,
-    TemasComponent,
     HtmlComponent,
-    CssComponent,
     JavascriptComponent,
     NodeComponent,
     AngularComponent,

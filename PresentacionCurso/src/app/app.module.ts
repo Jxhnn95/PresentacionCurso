@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { PaginasComponent } from './paginas/paginas.component';
-import { InicioComponent } from './inicio/inicio.component';
+import { InicioComponent } from './inicio/InicioComponent';
 import { HtmlComponent } from './paginas/html/html.component';
 import { JavascriptComponent } from './paginas/javascript/javascript.component';
 import { NodeComponent } from './paginas/node/node.component';

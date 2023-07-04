@@ -5,40 +5,40 @@
   <meta charset="utf-8">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="inicio.component.css">
 
-
-  <link rel="shortcut icon" href="../paginas/html/Imagenes/LetterJ.png">
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
-
-
-
-
+  <link rel="shortcut icon" href="/PresentacionCurso/src/app/paginas/html/Imagenes/LetterJ.png">
+  <link rel="stylesheet" href="/PresentacionCurso/src/app/inicio/inicio.component.css">
+<title>INDICE</title>
+<script src="http://kit.fontawesome.com/41bca2ae3.js"
+crossorigin="anonymous"></script>
 </head>
 
 <body>
 
   <header>
-    <div class="header">
+
+    <div class="header__superior">
       <div class="logo">
-        <img src="../paginas/html/Imagenes/LetterJ.png" alt="">
+        <img src="/PresentacionCurso/src/app/paginas/html/Imagenes/LetterJ.png" alt="">
       </div>
+      <h2>INDICE</h2>
 
     </div>
     <div class="container__menu">
       <div class="menu">
+        <input type="checkbox" id="check__menu">
+        <label id="#label__check" for="check__menu">
+          <i class="fas fa-bars icon__menu"></i>
+        </label>
+
         <nav>
           <ul>
-            <li><a href="inicio.component.html">Inicio</a></li>
-            <li><a href="../paginas/paginas.component.html">Páginas</a>
+            <li><a href="#" id="selected"></a></li>
+            <li><a href="inicio.component.html"></a></li>
+            <li><a href=" ../paginas/paginas.component.html">Páginas</a>
               <ul>
                 <li><a href="../paginas/html/html.component.html"> Html Css</a></li>
                 <li><a href="../paginas/javascript/javascript.component.html">Js</a></li>
-                <li><a href="../paginas/java/java.component.html">Java</a></li>
-
               </ul>
             </li>
 
@@ -56,11 +56,35 @@
       </div>
     </div>
   </header>
+  <main>
+    <section>
+    <article>
+      <h2><li><a href="../paginas/html/html.component.html"> Html Css</a></li></h2>
+      <p>Aqui podemos mirar lo apredido en HTML</p>
+    </article></section><section>
+    <article>
+      <h2><li><a href="../paginas/javascript/javascript.component.html">Js</a></li></h2>
+      <p>Aqui podemos mirar lo aprendido en JavaScript,ejercicios y mas proyectos</p>
+    </article></section><section>
+    <article>
+      <h2><li><a href="../paginas/angular/angular.component.html">Angular</a></li></h2>
+      <p>Aqui podemos mirar lo aprendido en ANGULAR</p>
+    </article></section><section>
+    <article>
+      <h2> <li><a href="../paginas/node/node.component.html">node</a></li></h2>
+      <p>Aqui podemos mirar lo aprendido en NODE</p>
+    </article></section><section>
+    <article>
+      <h2><li><a href="../paginas/java/java.component.html">Java</a></li></h2>
+      <p>Aqui podemos mirar lo aprendido en JAVA </p>
+    </article></section>
+  </main>
+
+
 
 
 
   <app-root></app-root>
-
 </body>
 
 </html>

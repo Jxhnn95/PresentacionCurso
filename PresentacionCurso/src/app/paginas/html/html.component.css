@@ -1,11 +1,171 @@
 /* el asterisco (*) representa cualquier etiqueta del dcumento */
-* {
+*{
+  /*del menu desplegable*/
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+  text-decoration: none;
 
-  box-sizing: border-box;
-  /* con "--" podemos definir valores reutilizables. útil para colores, o tamaños */
-  --color-text: black;
-  background-color: antiquewhite;
 }
+
+header{
+  width: 100%;
+  position:fixed;
+  top:0;
+  left:0;
+  background:antiquewhite;
+}
+
+
+.header__superior{
+  max-width:1200px;
+  margin: auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:5px;
+}
+
+
+.logo img{
+  width:40px;
+
+
+}
+
+/*barra menu*/
+
+.container__menu{
+  width: 100%;
+  height:65px;
+  background:rgb(155, 138, 116);
+  padding:0px 20px;
+  }
+
+.menu{
+    max-width: 1200px;
+    margin:auto;
+    height:100%;
+  }
+
+
+  nav{
+     height: 100% ;
+  }
+
+  nav > ul{
+    height: 100%;
+    display:flex;
+  }
+
+  nav  ul  li {
+
+  height: 100%;
+  list-style:none;
+  position:relative;
+}
+
+nav > ul > li:first-child  > a {
+  background-image: url(/PresentacionCurso/src/app/paginas/html/Imagenes/inicio.png) ;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding:20px 40px;
+}
+
+nav > ul > li:first-child:hover > a {
+  background-image: url(/PresentacionCurso/src/app/paginas/html/Imagenes/inicio.png) ;
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding:20px 40px;
+
+}
+
+nav> ul> li> a {
+
+  width: 100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  padding:20px;
+  color:#ffffff;
+  transition: all 300ms ease;
+}
+
+nav > ul > li > a:hover {
+  transform:scale(1.1);
+  background:rgb(202, 176, 141);
+  box-shadow:0px 0px 10px 0px rgb(#000000cb);
+}
+#selected{
+  transform:scale(1.1);
+  background-color:#bfb395cb;
+  box-shadow:0px 0px 10px 0px black;
+}
+/*sub-menu*/
+nav ul li ul {
+  width: 200px;
+  display:flex;
+  flex-direction: column;
+  background:white;
+  position:absolute;
+  top:90px;
+  left:-5px;
+  padding:14px 0px;
+  visibility:hidden;
+  opacity:0;
+  box-shadow: 0px 0px 10px 0px black;
+  z-index:10;
+
+}
+
+nav ul li:hover ul{
+  visibility:visible;
+  opacity:1;
+  top: 70px;
+
+}
+
+nav ul li ul:before{
+  content:'';
+  width:0;
+  height:0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid white;
+  position:absolute;
+  top:-12px;
+  left:20px;
+
+}
+
+nav ul li ul li a{
+  display:block;
+  color:gray;/*color letras de desplegable*/
+  padding:6px;
+  padding-left: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  transition:all 300ms ease;
+}
+
+nav ul li ul li a:hover{
+  background:rgb(138, 101, 48); /*fondo de desplegable*/
+  color:rgb(255, 255, 255);
+  transform: scale(1.1);
+  padding-left: 30px;
+  font-size:14px;
+  box-shadow:0px 0px 10px 0px rbga(0.0.0.0.5);
+}
+
+
+
+
+
+
+
 
 body {
   /* si indicamos el tamaño de fuente en el body, se hereda en el resto del contenido */
@@ -24,7 +184,7 @@ main {
   /* definimos dónde se verá en nuestra template con grid */
   grid-area: main;
   min-height: 600px;
-  padding-right: 18px;
+  padding: right 18px;
 }
 
 .grid-container {
@@ -32,32 +192,27 @@ main {
   grid-template-rows: auto;
   grid-template-columns: 3fr 1fr;
   grid-template-areas:
-      "header header"
-      "nav nav"
+
       "main sidebar"
       "footer footer";
   /* si definimos un ancho máximo y añadimos margin: auto, centraremos el contenedor horizontalmente */
-  max-width: 960px;
-  margin: auto;
+  max-width: 80% 20%;
+  margin: 140px;
   padding: 18px;
 }
 
-.main-header {
-  /* ver grid-template-areas en .grid-container */
-  /* definimos dónde se verá en nuestra template con grid */
-  grid-area: header;
-}
 
-.main-nav {
+
+.main-footer {
   /* ver grid-template-areas en .grid-container */
   /* definimos dónde se verá en nuestra template con grid */
-  grid-area: nav;
+  grid-area:footer;
 }
 
 /* podemosun elemento dentro de otro indicando los selectores de ambos separados con un espacio
 también podemos aplicar los mismos estilos a varios selectores, separándolos con comas (,)
 en este caso aplicamos los mismos estilos base al menú principal y el del footer */
-.main-nav ul li ,
+
 .main-footer ul li {
   /* con flex, distribuimos el contenido en horizontal (por defecto, se puede cambiar) */
   display: flex;
@@ -74,7 +229,7 @@ en este caso aplicamos los mismos estilos base al menú principal y el del foote
   justify-content: center;
 }
 
-.main-nav a,
+
 .main-footer a {
   text-decoration: none;
   text-transform: capitalize;
@@ -83,79 +238,12 @@ en este caso aplicamos los mismos estilos base al menú principal y el del foote
   color: var(--color-text);
 }
 
-/* podemos seleccionar estados de un elemento indicando su selector:estado
-por ejemplo, hover, para cuando el cursor está sobre el elemento, en este caso un enlace */
-.li-nav a:hover {
-  /* indicamos el ancho del border, el estilo y el color en la misma línea */
-  border-bottom: 3px solid var(--color-text);
-}
+
 
 /* en font-size también podemos utilizar palabras reservadas como "small" */
 .main-footer a {
   font-size: small;
 }
-
-
-
-
-
-
-
-#nav {
-  margin:auto;
-  width:1000px;
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-ul, li {
-  list-style:none;
-}
-
-.nav {
-  width:500px; /*Le establecemos un ancho*/
-  margin:0 auto; /*Centramos automaticamente*/
-  height: 0 auto;
-}
-
-.nav > li {
-  float:left;
-}
-
-.nav li a {
-  background-color:#000;
-  color:#fff;
-  text-decoration:none;
-  padding:10px 12px;
-  display:block;
-}
-
-.nav li a:hover {
-  background-color:#434343;
-}
-
-.nav li ul {
-  display:none;
-  position:absolute;
-  min-width:140px;
-}
-
-.nav li:hover > ul {
-  display:block;
-}
-
-.nav li ul li {
-  position:relative;
-}
-
-
-
-
-
-
-
-
-
-
 
 
 .sidebar {
@@ -210,37 +298,136 @@ ul, li {
   box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.75);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ELEMENTOS RESPONSIVOS*/
+.icon__menu{
+  font-size: 26px;
+  color:white;
+  cursor:pointer;
+  width:26px;
+  height:100%;
+  display:none;
+  align-items:center;
+
+}
+#label__check{
+  width:26px;
+  height:100%;
+  display:none;
+
+
+}
+#check__menu{
+  display:none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* usamos mediqueries para modificar estilos según el tamaño de pantalla
 en este caso aplicaremos otros estilos cuando la pantalla sea más pequeña que la de un iPad mini (768px) */
-@media (max-width: 767px) {
-  /* solo hace falta añadir los estilos a modificar */
+
+@media screen and(max-width: 720px){
+  .header__superior{
+    padding:10px;
+  }
+  .logo{
+    width:20px;
+  }
+  nav>ul{
+    flex-direction:column;
+    position:flex;
+    left:0;
+    top: 150px;
+    width:100%;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index:100;
+    opacity:0;
+    visibility:hidden;
+  }
+  nav>ul>li>a:hover{
+    transform:scale(1);
+
+  }
+  nav> ul> li> ul{
+    left:50px;
+     }
+     nav>ul>li:first-child a{
+      background-position:20px;
+     }
+     #selected{
+      transform:scale(1);
+     }
+     #label__check{
+      display:block;
+     }
+     .icon__menu{
+      display:flex;
+     }
+     #chack__menu:checked ~ nav > ul{
+      height:300px;
+      visibility:visible;
+      opacity:1;
+     }
+     /* solo hace falta añadir los estilos a modificar */
   .grid-container {
-      /* ahora el grid solo es de una columna */
-      grid-template-columns: 100%;
-      grid-template-areas:
+    /* ahora el grid solo es de una columna */
+    grid-template-columns: 100%;
+    grid-template-areas:
 
-      "header"
-      "nav"
-      "main"
-      "sidebar"
-      "footer";
-  }
+    "main"
+    "sidebar"
+    "footer";
+}
 
-  /* el menú principal es vertical */
-  nav ul {
-      flex-direction:column;
 
-  }
+}
 
-  /* le quitamos el borde y el espaciado al sidebar */
-  .sidebar {
-      border-left: none;
-      padding: 0;
-  }
+/* le quitamos el borde y el espaciado al sidebar */
+.sidebar {
+    border-left: none;
+    padding: 0;
+}
 
-  /* quitamos la altura mínima del main */
-  main {
-      min-height: auto;
-  }
-  }
-
+/* quitamos la altura mínima del main */
+main {
+    min-height: auto;
+}

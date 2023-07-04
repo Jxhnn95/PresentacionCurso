@@ -1,8 +1,3 @@
-
-
-
-
-
 /* el asterisco (*) representa cualquier etiqueta del dcumento */
 * {
 
@@ -227,8 +222,9 @@ en este caso aplicaremos otros estilos cuando la pantalla sea más pequeña que 
 
 
       "main"
+      "header"
 
-      "footer";
+      "footer"
       "nav";
 
   }
@@ -241,6 +237,5 @@ en este caso aplicaremos otros estilos cuando la pantalla sea más pequeña que 
   /* quitamos la altura mínima del main */
   main {
       min-height: auto;
-  }
   }
 

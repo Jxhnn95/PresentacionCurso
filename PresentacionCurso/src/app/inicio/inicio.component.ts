@@ -5,10 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
-@NgModule.schemas{
-  CUSTOM_ELEMENTS_SCHEMA
 
-}
 export class InicioComponent {
 
 }

@@ -4,6 +4,7 @@ import { Component, OnInit , Input } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html' ,
   styleUrls: ['./app.component.css' ]
+  /*
 
   templateUrl:'../app/inicio/inicio.html',
   styleUrls: ['../app/inicio/inicio.component.css'],
@@ -21,7 +22,7 @@ import { Component, OnInit , Input } from '@angular/core';
   styleUrls: ['./paginas/javascript/javascript.component.css'],
 
   templateUrl:'./paginas/node/node.component.html',
-  styleUrls: ['./paginas/node/node.component.css'],
+  styleUrls: ['./paginas/node/node.component.css'],*/
 
 
 
@@ -31,6 +32,8 @@ import { Component, OnInit , Input } from '@angular/core';
 export class AppComponent {
   title = 'PresentacionCurso';
 }
+
+/*
 export class AngularComponent implements OnInit{
 
   title= 'Angular'
@@ -51,4 +54,4 @@ export class JavascriptComponent implements OnInit{
 }
 export class Nodecomponent implements OnInit{
   title= "node"
-}
+}*/

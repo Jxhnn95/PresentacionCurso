@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { PaginasComponent } from './paginas/paginas.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { TemasComponent } from './temas/temas.component';
 import { HtmlComponent } from './paginas/html/html.component';
 import { CssComponent } from './paginas/css/css.component';
 import { JavascriptComponent } from './paginas/javascript/javascript.component';
